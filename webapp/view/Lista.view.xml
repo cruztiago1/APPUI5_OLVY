@@ -1,0 +1,38 @@
+<mvc:View controllerName="ovly.fiori_20.cadastro_de_alunos.controller.Lista" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>ListaPageTitle}" showNavButton="true">
+					<!-- Pagina-->
+					<content>
+						<SearchField placeholder="Nome" search="onSearch"/>
+						<List items="{/Students}" growing="true" growingScrollToLoad="true" growingThreshold="10" noDataText="Nenhum aluno encontrado"
+							itemPress="onItemPress">
+							<items>
+								<StandardListItem title="{FirstName} {LastName}" info="{UserName}" icon="sap-icon://business-card" type="Active"/>
+							</items>
+						</List>
+						<!--				
+					<List items="{/alunos}" noDataText="Nenhum aluno encontrado" itemPress="onItemPress">
+						<items> 
+			   	    <StandardListItem title="{id}" info="{nome}" icon="sap-icon://business-card" type="Active" /> 
+				     <StandardListItem title="{id}" info="{nome}" icon="sap-icon://business-card" type="Navigation"/>
+					<StandardListItem title="{id}" info="{nome}" icon="sap-icon://business-card" type="DetailAndActive"/>
+						</items>
+					</List>				
+	               -->
+					</content>
+					<!-- Cabeçalho-->
+					<footer>
+						<Bar>
+							<contentRight>
+								<Button icon="sap-icon://accept" type="Emphasized" press="onAdd"></Button>
+							</contentRight>
+						</Bar>
+					</footer>
+					<!-- Rodapé-->
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
